@@ -31,4 +31,8 @@ same_time_type(::Reactant.ConcretePJRTNumber{FT}, ::TT) where {FT, TT} = FT == T
 same_time_type(::Reactant.ConcretePJRTNumber{FT}, ::Reactant.ConcretePJRTNumber{TT}) where {FT, TT} = FT == TT
 same_time_type(::FT, ::Reactant.ConcretePJRTNumber{TT}) where {FT, TT} = FT == TT
 
+same_time_type(::Reactant.ConcreteIFRTNumber{FT}, ::TT) where {FT, TT} = FT == TT
+same_time_type(::Reactant.ConcreteIFRTNumber{FT}, ::Reactant.ConcreteIFRTNumber{TT}) where {FT, TT} = FT == TT
+same_time_type(::FT, ::Reactant.ConcreteIFRTNumber{TT}) where {FT, TT} = FT == TT
+
 end # module NumericalEarthReactantExt
